@@ -1,0 +1,6 @@
+1) sudo sysadminctl -addUser demo -fullName "DEMO" -password Welcome@123 -home /Users/demo -admin
+2) id demo
+3) dscl.list/Users
+4) sudo dscl . -delete /Users/test
+5) sudo dscl . -delete /Groups/groupname GroupMembership username
+6) sudo rm -rf /Users/test
