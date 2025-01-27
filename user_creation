@@ -1,0 +1,8 @@
+sudo sysadminctl -addUser demo -fullName “DEMO” -password Welcome@123 -home /Users/demo -admin
+id demo
+dscl . list /Users
+sudo dscl . -delete /Users/test
+sudo dscl . -delete /Groups/groupname GroupMembership username
+# Directory Service command line utility
+. Represent Essentially, you're telling dscl to work with the local user database on your machine.
+chmod +x myscript.sh.
