@@ -1,4 +1,16 @@
-sudo sysadminctl -addUser demo -fullName “DEMO” -password Welcome@123 -home /Users/demo -admin
+#!/bin/bash
+echo "For user creation press u and for user deletion press d:"
+read u
+if [ "$u" == "u" ]
+then
+echo "Enter the user name to create with home directory with admin privilege:"
+read a
+sudo sysadminctl -addUser demo -fullName “$a” -password Welcome@123 -home /Users/$a -admin
+else
+        echo "Enter the user name to delete on this machine:"
+        read d
+fi
+
 id demo
 dscl . list /Users
 sudo dscl . -delete /Users/test
