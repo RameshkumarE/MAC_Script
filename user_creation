@@ -1,3 +1,4 @@
+
 #!/bin/bash
 echo "For user creation press u or for user deletion press d:"
 read u
@@ -7,12 +8,13 @@ echo "Enter the user name to create with home directory with admin privilege:"
 read a
 echo "Create the password for this $a user:"
 read -s wait
-echo "sudo sysadminctl -addUser $a -fullName “$a” -password  -home /Users/$a -admin"
+sudo sysadminctl -addUser $a -fullName “$a” -password "$wait" -home /Users/$a -admin
+
+echo "id $a"
 else
         echo "Enter the user name to delete on this machine:"
         read d
 fi
-
 
 
 id demo
